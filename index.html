@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Profesional | Ahli Peternakan & QC</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Config for Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#059669', // Emerald 600
+                        secondary: '#0f766e', // Teal 700
+                        dark: '#1e293b', // Slate 800
+                        light: '#f8fafc', // Slate 50
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom styles for things Tailwind doesn't cover easily */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+        .timeline-dot::before {
+            content: '';
+            position: absolute;
+            left: -0.4rem;
+            top: 0.25rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: #059669;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #059669;
+        }
+        .timeline-line::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1.5rem;
+            bottom: -1.5rem;
+            width: 2px;
+            background-color: #e2e8f0;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-700 bg-slate-50 antialiased selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav border-b border-slate-200 transition-all duration-300 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i data-lucide="microscope" class="text-primary h-6 w-6"></i>
+                    <span class="font-bold text-xl text-dark tracking-tight">Muhamad Reza Fahlevi</span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#beranda" class="text-slate-600 hover:text-primary font-medium transition">Beranda</a>
+                    <a href="#tentang" class="text-slate-600 hover:text-primary font-medium transition">Tentang</a>
+                    <a href="#keahlian" class="text-slate-600 hover:text-primary font-medium transition">Keahlian</a>
+                    <a href="#pengalaman" class="text-slate-600 hover:text-primary font-medium transition">Pengalaman</a>
+                    <a href="#kontak" class="text-slate-600 hover:text-primary font-medium transition">Kontak</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-primary focus:outline-none">
+                        <i data-lucide="menu" class="h-6 w-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#beranda" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Beranda</a>
+                <a href="#tentang" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Tentang</a>
+                <a href="#keahlian" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Keahlian</a>
+                <a href="#pengalaman" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Pengalaman</a>
+                <a href="#kontak" class="block px-3 py-2 text-base font-medium text-slate-700 hover:text-primary hover:bg-slate-50 rounded-md">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="beranda" class="pt-28 pb-16 md:pt-36 md:pb-24 overflow-hidden relative">
+        <!-- Background Decoration -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+            <div class="absolute -top-40 -right-40 w-96 h-96 rounded-full bg-primary/10 blur-3xl"></div>
+            <div class="absolute top-40 -left-20 w-72 h-72 rounded-full bg-teal-500/10 blur-3xl"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+                
+                <!-- Text Content -->
+                <div class="w-full md:w-3/5 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-sm font-semibold">
+                        <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                        <span>Sarjana Peternakan Universitas Diponegoro</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-dark leading-tight">
+                        Spesialis R&D dan <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-teal-500">Quality Control</span> Peternakan & Pangan Hewani
+                    </h1>
+                    <p class="text-lg text-slate-600 leading-relaxed max-w-2xl">
+                        Membawa pendekatan analitis berbasis data dan berorientasi hasil. Memiliki rekam jejak riset rekayasa nutrisi, fisiologis dan inspeksi kesehatan hewan serta kualitas dan keamanan pangan asal hewan untuk meningkatkan standar mutu industri peternakan dan pangan asal hewan.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="#kontak" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-primary hover:bg-emerald-700 text-white font-medium rounded-lg shadow-lg shadow-emerald-500/30 transition-all duration-300 transform hover:-translate-y-1">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                            Hubungi Saya
+                        </a>
+                        <a href="#pengalaman" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white border border-slate-300 hover:bg-slate-50 text-slate-700 font-medium rounded-lg transition-all duration-300">
+                            Lihat Portofolio
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Image -->
+                <div class="w-full md:w-2/5 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-tr from-primary to-teal-400 rounded-3xl transform rotate-3 scale-105 opacity-20 blur-lg"></div>
+                        <!-- Ganti URL di bawah dengan foto asli Anda -->
+                        <img src="https://www.image2url.com/r2/default/images/1782112353451-de468b31-dcb7-4dce-a55b-84a28fae0985.png"
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -left-6 z-20 bg-white p-4 rounded-xl shadow-lg flex items-center gap-3 border border-slate-100">
+                            <div class="bg-blue-100 p-2 rounded-lg text-blue-600">
+                                <i data-lucide="award" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-500 font-medium">Tahun Lulus 2026</p>
+                                <p class="text-sm font-bold text-dark">IPK 3.87</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section id="tentang" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Profil Profesional</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        Saya merupakan Sarjana Peternakan lulusan Universitas Diponegoro yang memiliki ketertarikan mendalam serta keahlian analitis di bidang <strong>fisiologi ternak, kesehatan ternak, mikrobiologi terapan, dan Quality Control (QC)</strong> produk pangan asal hewan.
+                    </p>
+                    <p class="text-slate-600 leading-relaxed text-lg">
+                        Berbekal pengalaman sebagai Asisten Laboratorium Fisiologi & Biokimia, saya memiliki kompetensi teknis dalam operasional instrumentasi lab dan analisis data yang presisi. Saya memiliki motivasi tinggi untuk berkontribusi pada peran strategis di divisi R&D (Research & Development) maupun QC di industri peternakan dan industri pangan asal hewan.
+                    </p>
+                    
+                    <div class="bg-slate-50 border border-slate-100 p-6 rounded-2xl shadow-sm">
+                        <h3 class="font-bold text-dark mb-3 flex items-center gap-2">
+                            <i data-lucide="target" class="text-primary w-5 h-5"></i>
+                            Fokus Karir (Career Objective)
+                        </h3>
+                        <p class="text-slate-600">
+                            Siap membawa pendekatan analitis berbasis data dan berorientasi hasil untuk menjamin biosekuriti, meningkatkan manajemen nutrisi/stres ternak, serta memastikan standardisasi mutu pangan asal hewan.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Riset Unggulan Card -->
+                <div class="bg-gradient-to-br from-primary to-teal-700 p-8 rounded-3xl text-white shadow-xl relative overflow-hidden">
+                    <i data-lucide="flask-conical" class="absolute -right-6 -bottom-6 w-48 h-48 text-white opacity-10"></i>
+                    <h3 class="text-2xl font-bold mb-4 relative z-10">Riset Unggulan</h3>
+                    <div class="bg-white/10 backdrop-blur-md rounded-xl p-5 border border-white/20 relative z-10">
+                        <h4 class="font-semibold text-lg mb-2">Rekayasa Nutrisi (Enkapsulasi Aditif)</h4>
+                        <p class="text-emerald-50 text-sm mb-4">
+                            Penelitian komprehensif dengan judul "Pengaruh Pemberian Enkapsulasi Daun Benalu (Dendrophtoe pentandra) terhadap Profil Mikroba Ileum dan Sekum Ayam Broiler pada Kepadatan Kandang Tinggi".
+                        </p>
+                        <ul class="space-y-2 text-sm text-emerald-100">
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 shrink-0"></i>
+                                Analisis fisiologis dan profil mikroba
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 shrink-0"></i>
+                                Pengujian aditif pakan
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <i data-lucide="check-circle-2" class="w-4 h-4 mt-0.5 shrink-0"></i>
+                                Reduksi tingkat stres ternak
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Keahlian Utama -->
+    <section id="keahlian" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Kompetensi & Keahlian</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto">Kombinasi antara ilmu dasar kesehatan ternak, fisiologis ternak, mikrobiologi dan mutu pangan asal hewan dengan aplikasi teknis industri.</p>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Skill 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center mb-4 text-primary">
+                        <i data-lucide="microscope" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Fisiologi & Mikrobiologi</h3>
+                    <p class="text-slate-600 text-sm">Pemahaman mendalam tentang fungsi sistem organ ternak serta mikrobiologi terapan untuk optimasi kesehatan dan pencernaan hewan.</p>
+                </div>
+                <!-- Skill 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-teal-100 rounded-xl flex items-center justify-center mb-4 text-teal-600">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Quality Control (QC)</h3>
+                    <p class="text-slate-600 text-sm">Inspeksi, pengujian, dan standardisasi mutu produk pangan asal hewan (susu, daging, telur) sesuai regulasi keamanan pangan.</p>
+                </div>
+                <!-- Skill 3 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 text-blue-600">
+                        <i data-lucide="test-tubes" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Instrumentasi Laboratorium</h3>
+                    <p class="text-slate-600 text-sm">Pengoperasian alat-alat laboratorium biokimia dan analitik untuk keperluan R&D, pengujian sampel pakan, mikrobiologis dan fisiologis ternak.</p>
+                </div>
+                <!-- Skill 4 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4 text-amber-600">
+                        <i data-lucide="leaf" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Rekayasa Nutrisi</h3>
+                    <p class="text-slate-600 text-sm">Formulasi pakan, penambahan aditif, dan teknologi enkapsulasi untuk mengatasi heat-stress dan manajemen stres pada unggas.</p>
+                </div>
+                <!-- Skill 5 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4 text-red-600">
+                        <i data-lucide="cross" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Biosekuriti & Kesehatan</h3>
+                    <p class="text-slate-600 text-sm">Penerapan protokol biosekuriti ketat di farm, pencegahan penyakit zoonosis, dan manajemen inspeksi kesehatan ternak secara masif.</p>
+                </div>
+                <!-- Skill 6 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 text-purple-600">
+                        <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-dark mb-2">Analisis Data Riset</h3>
+                    <p class="text-slate-600 text-sm">Pengolahan data penelitian kuantitatif, analisis statistik performa ternak, dan pengambilan keputusan berbasis data akurat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pengalaman Kerja -->
+    <section id="pengalaman" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-dark mb-4">Jejak Pengalaman</h2>
+                <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="relative pl-8 md:pl-0">
+                <!-- Vertical Line (Desktop) -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-slate-200"></div>
+
+                <!-- Item 1: Asisten Lab -->
+                <div class="relative mb-12 md:flex md:justify-between md:items-center">
+                    <div class="md:w-5/12 mb-4 md:mb-0 md:text-right md:pr-8">
+                        <h3 class="text-xl font-bold text-dark">Asisten Lab Fisiologi & Biokimia</h3>
+                        <p class="text-primary font-medium text-sm">Universitas Diponegoro</p>
+                        <p class="text-slate-500 text-sm mt-1">Juni, 2023 - Juni, 2025</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-sm transform -translate-x-[1.35rem] md:-translate-x-1/2 mt-1.5 md:mt-0 z-10"></div>
+                    <div class="md:w-5/12 md:pl-8">
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Bertanggung jawab mendampingi mahasiswa dalam praktikum operasional instrumen analitik pada mata kuliah Biologi, Fisiologi Ternak dan Fisiologi Lingkungan Peternakan. Terlibat langsung dalam desain eksperimen, pengambilan sampel biologis, serta validasi data analisis profil darah, fisiologi ternak dan fisiologi lingkungan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2: BKHKMV -->
+                <div class="relative mb-12 md:flex md:justify-between md:items-center flex-row-reverse">
+                    <div class="md:w-5/12 mb-4 md:mb-0 md:pl-8">
+                        <h3 class="text-xl font-bold text-dark">Analisis Keamanan Pangan Asal Hewan dan Penyakit Hewan Ternak</h3>
+                        <p class="text-teal-600 font-medium text-sm">BKHKMV DKPP Jawa Barat</p>
+                        <p class="text-slate-500 text-sm mt-1">Juli 2024</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-teal-500 border-4 border-white shadow-sm transform -translate-x-[1.35rem] md:-translate-x-1/2 mt-1.5 md:mt-0 z-10"></div>
+                    <div class="md:w-5/12 md:pr-8 md:text-right">
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 text-left md:text-right">
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Melakukan pengawasan lalu lintas ternak, audit standar operasional kandang, serta memastikan implementasi protokol biosekuriti secara ketat untuk mencegah penyebaran penyakit hewan menular strategis (PHMS).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3: KPSBU -->
+                <div class="relative mb-12 md:flex md:justify-between md:items-center">
+                    <div class="md:w-5/12 mb-4 md:mb-0 md:text-right md:pr-8">
+                        <h3 class="text-xl font-bold text-dark">Paramedik Kesehatan Hewan</h3>
+                        <p class="text-primary font-medium text-sm">KPSBU Lembang</p>
+                        <p class="text-slate-500 text-sm mt-1">Januari 2025</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white shadow-sm transform -translate-x-[1.35rem] md:-translate-x-1/2 mt-1.5 md:mt-0 z-10"></div>
+                    <div class="md:w-5/12 md:pl-8">
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100">
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Melakukan pengawasan lalu lintas ternak, audit standar operasional kandang, memastikan implementasi protokol biosekuriti secara ketat untuk mencegah penyebaran penyakit hewan menular strategis (PHMS), serta melaksanakan penanganan medikasi terhadap ternak.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4: BET Cipelang -->
+                <div class="relative md:flex md:justify-between md:items-center flex-row-reverse">
+                    <div class="md:w-5/12 mb-4 md:mb-0 md:pl-8">
+                        <h3 class="text-xl font-bold text-dark">Manajemen Mutu Breeding & Paramedik Kesehatan Hewan</h3>
+                        <p class="text-teal-600 font-medium text-sm">BET Cipelang, Bogor</p>
+                        <p class="text-slate-500 text-sm mt-1">Januari 2024</p>
+                    </div>
+                    <div class="absolute left-0 md:left-1/2 w-4 h-4 rounded-full bg-teal-500 border-4 border-white shadow-sm transform -translate-x-[1.35rem] md:-translate-x-1/2 mt-1.5 md:mt-0 z-10"></div>
+                    <div class="md:w-5/12 md:pr-8 md:text-right">
+                        <div class="bg-slate-50 p-5 rounded-xl border border-slate-100 text-left md:text-right">
+                            <p class="text-slate-600 text-sm leading-relaxed">
+                                Pengalaman teknis mendalam dalam manajemen seleksi embrio ternak unggul. Mengawal biosekuriti kandang berstandar nasional dan memastikan asupan nutrisi optimal untuk memaksimalkan angka keberhasilan transfer embrio dan melaksanakan program medikasi terhadap hewan ternak.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Call To Action (CTA) / Contact -->
+    <section id="kontak" class="py-20 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="pattern" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <circle cx="2" cy="2" r="1" fill="currentColor"></circle>
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#pattern)"></rect>
+            </svg>
+        </div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Siap Berkolaborasi?</h2>
+            <p class="text-slate-300 mb-10 text-lg max-w-2xl mx-auto">
+                Saya mencari tantangan karir di posisi <strong>R&D</strong> atau <strong>Quality Control</strong> pada perusahaan peternakan atau industri makanan berbasis hewan. Mari diskusikan bagaimana analisis data dan keahlian saya dapat berkontribusi pada perusahaan Anda.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-6 mb-12">
+                <a href="mailto:email.anda@gmail.com" class="flex items-center justify-center gap-3 bg-primary hover:bg-emerald-600 px-8 py-4 rounded-xl font-semibold transition-all shadow-lg shadow-emerald-500/20">
+                    <i data-lucide="mail" class="w-5 h-5"></i>
+                    muhamadrezafahlevi0@gmail.com
+                </a>
+                <a href="https://id.jobstreet.com/id/profiles/muhamadreza-fahlevi-1fLfMT1BgZ" target="_blank" class="flex items-center justify-center gap-3 bg-slate-800 hover:bg-slate-700 border border-slate-700 px-8 py-4 rounded-xl font-semibold transition-all">
+                    <i data-lucide="jobstreet" class="w-5 h-5"></i>
+                    Jobstreet Profil
+                </a>
+                <!-- Optional: Download CV Button -->
+                <a href="#" class="flex items-center justify-center gap-3 bg-white text-slate-900 hover:bg-slate-100 px-8 py-4 rounded-xl font-semibold transition-all">
+                    <i data-lucide="download" class="w-5 h-5"></i>
+                    Unduh CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-8 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2 text-slate-400">
+                <i data-lucide="microscope" class="w-5 h-5"></i>
+                <span class="font-medium text-slate-300">Muhamad Reza Fahlevi &copy; 2026</span>
+            </div>
+            <p class="text-slate-500 text-sm text-center md:text-left">
+                Sarjana Peternakan | R&D & QC Specialist
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        const menuLinks = menu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Add shadow to navbar on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 10) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
